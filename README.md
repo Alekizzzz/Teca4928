@@ -1,2 +1,2 @@
-# Teca4928
-codigo para o meu site
+# Jornal Connect
+Site doJornal Connect, newspapper da escola IENH
