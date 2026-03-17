@@ -1,2 +1,2 @@
 # Jornal Connect
-Site doJornal Connect, newspapper da escola IENH
+Site do Jornal Connect, newspapper da escola IENH
