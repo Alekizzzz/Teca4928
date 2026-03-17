@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* isso deixa mais facil usar as cores e a paleta  */
+
+:root {
+    --amarelo: #FFD700;
+    --amarelo-vivo: #FFC107;
+    --laranja: #FF8C00;
+    --preto: #111111;
+    --branco: #ffffff;
+    --cinza-claro: #f5f5f5;
+    --cinza-texto: #555;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url(../images/lara.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.10;
+  z-index: -1;
+}
+/* header */
+
+header {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 18px 48px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--amarelo-vivo);
+}
+
+/* footer */
+
+footer {
+    margin-top: 50px;
+    height: 200px;
+    background-color: var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 4px solid var(--amarelo-vivo);
+}
+
+/* logo */
+
+.logo {
+    justify-self: start;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.footerlogo {
+    height: 200px;
+    justify-self: start;
+    display: flex;
+    padding: 5px 8px;
+    align-items: center;
+}
+
+/* nav */
+
+.secoes {
+    display: flex;
+    gap: 8px;
+    justify-self: center;
+}
+
+.secoes a {
+    color: var(--preto);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: 0.2s, color 0.2s;
+}
+
+.secoes a:hover {
+    background-color: var(--amarelo-vivo);
+    color: var(--preto);
+}
+
+/* botao aura */
+
+.inscricao {
+    justify-self: end;
+}
+
+.btn-inscreva {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: var(--preto);
+    background-color: var(--amarelo-vivo);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.btn-inscreva:hover {
+    background-color: var(--laranja);
+    color: #fff;
+    transform: translateY(+1px);
+}
+
+/* texto grande */
+
+.textogrande {
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+.textogrande h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(48px, 9vw, 110px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--preto);
+    letter-spacing: -0.02em;
+}
+
+.textogrande h1 span {
+    color: var(--amarelo-vivo);
+    -webkit-text-stroke: 1.99px var(--preto);
+    font-style: italic;
+}
+
+.textogrande p {
+    font-size: clamp(14px, 2vw, 18px);
+    color: #444;
+    margin-top: 25px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.textogrande p strong {
+    font-weight: 700;
+    color: var(--preto);
+}
+
+/* email */
+
+.email-box {
+    margin: 3vw auto;
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    padding: 8px 8px 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--preto);
+    box-shadow: 4px 4px 0px var(--amarelo-vivo);
+}
+
+.icon {
+    color: #999;
+    flex-shrink: 0;
+}
+
+.email-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: var(--preto);
+}
+
+.email-box input::placeholder {
+    color: #aaa;
+}
+
+.email-box button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    background-color: var(--amarelo-vivo);
+    border: 2px solid var(--preto);
+    color: var(--preto);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.email-box button:hover {
+    background-color: var(--laranja);
+    color: #fff;
+}
+
+/* link epico */
+
+.link-edicoes {
+    display: block;
+    margin-top: 12px;
+    color: var(--cinza-texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+
+.link-edicoes:hover {
+    color: var(--preto);
+    text-decoration: underline;
+}
+
+/* negocio ta bugado nn meche */
+
+.slider-connect {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.slider-connect h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(22px, 3vw, 32px);
+    color: var(--preto);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.slider-connect h2 span {
+    color: var(--amarelo-vivo);
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 100px;
+}
+
+.slides {
+    width: 320px;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.card {
+    min-width: 320px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    border: 2px solid var(--preto);
+    box-shadow: 5px 5px 0px var(--amarelo-vivo);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--amarelo-vivo);
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--preto);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--cinza-texto);
+    line-height: 1.5;
+}
+
+.card .tag {
+    display: inline-block;
+    background-color: var(--amarelo-vivo);
+    color: var(--preto);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+/* buttao */
+
+.prev, .next {
+    background-color: var(--amarelo-vivo);
+    border: 2px solid var(--preto);
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--preto);
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 3px 3px 0 var(--preto);
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--laranja);
+    color: #fff;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--preto);
+}
+
+/* rspsv */
+
+@media (max-width: 768px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+    }
+
+    .secoes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .inscricao {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-inscreva {
+        width: 100%;
+        text-align: center;
+    }
+
+    .textogrande {
+        margin-top: 60px;
+    }
+
+    .email-box {
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 16px;
+        align-items: stretch;
+    }
+
+    .email-box input {
+        width: 100%;
+    }
+
+    .email-box button {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+/* ota pagina */
+
+/* o grande texto eu to maluco */
+
+.equipe-hero {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.equipe-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(40px, 7vw, 90px);
+    font-weight: 900;
+    color: var(--preto);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+.equipe-hero h1 span {
+    color: var(--amarelo-vivo);
+    -webkit-text-stroke: 2px var(--preto);
+    font-style: italic;
+}
+
+.equipe-hero p {
+    margin-top: 16px;
+    font-size: clamp(14px, 2vw, 18px);
+    color: var(--cinza-texto);
+    font-weight: 400;
+}
+
+/* grid de membros */
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto 120px auto;
+    padding: 0 40px;
+}
+
+/* card do membro */
+
+.membro-card {
+    background: #fff;
+    border: 2px solid var(--preto);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px var(--amarelo-vivo);
+    overflow: hidden;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.membro-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--amarelo-vivo);
+}
+
+/* foto */
+
+.membro-foto {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.membro-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.membro-card:hover .membro-foto img {
+    transform: scale(1.04);
+}
+
+/* info */
+
+.membro-info {
+    padding: 18px 20px;
+    border-top: 2px solid var(--preto);
+}
+
+.membro-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--preto);
+    margin-bottom: 6px;
+}
+
+.cargo {
+    display: inline-block;
+    background-color: var(--amarelo-vivo);
+    color: var(--preto);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+/* responsivo */
+
+@media (max-width: 768px) {
+
+    .equipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .equipe-hero {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .equipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* edicoes */
+
+.folha {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.imagemfolha {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.selectedc {
+    display: flex;
+    justify-content: center;
+    padding: 20px 5px;
+}
